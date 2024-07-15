@@ -49,3 +49,93 @@ document.addEventListener('DOMContentLoaded',function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', async function () {
+  const filmsList = document.getElementById('films');
+
+  try {
+    const response = await fetch('http/localhost:3000/films'); 
+    if (!response.ok) {
+      throw new Error('Failed to fetch movie list');
+    }
+    const movies = await response.json();
+
+  
+    const placeholderLi = filmsList.querySelector('li');
+    if (placeholderLi) {
+      filmsList.removeChild(placeholderLi);
+    }
+  
+    
+    movies.forEach(movie => {
+      const li = document.createElement('li');
+      li.classList.add('film', 'item');
+      li.innerHTML = `<a href="#" data-id="${movie.id}">${movie.title}</a>`;
+      filmsList.appendChild(li);
+    })
+  } catch (error) {
+    console.error('no result', error);
+  }
+});
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', async function () {
+      const filmsList = document.getElementById('films');
+    
+      try {
+        const response = await fetch('http://localhost:3000/films');
+        if (!response.ok) {
+          throw new Error('no results');
+        }
+        const movies = await response.json();
+    
+        movies.forEach(movie => {
+          const li = document.createElement('li');
+          li.classList.add('film', 'item');
+          li.innerHTML = `
+            <img class="poster" src="${movie.poster}" alt="Movie Poster">
+            <h2 class="title">${movie.title}</h2>
+            <p class="runtime">Runtime: ${movie.runtime} minutes</p>
+            <p class="showtime">Showtime: ${movie.showtime}</p>
+            <p class="availableTickets">Available Tickets: ${movie.capacity - movie.tickets_sold}</p>
+            <p class="description">${movie.description}</p>
+            <button class="buy-ticket-btn" data-id="${movie.id}">Buy Ticket</button>
+          `;
+          filmsList.appendChild(li);
+    
+      
+          const buyTicketBtn = li.querySelector('.buy-ticket-btn');
+          buyTicketBtn.addEventListener('click', async function () {
+            try {
+              const movieId = this.dataset.id;
+              const response = await fetch(`http://localhost:3000/films/${movieId}/buy-ticket`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              });
+    
+              if (!response.ok) {
+                throw new Error('Failed to buy ticket');
+              }
+    
+        
+              const movieData = await response.json();
+              const availableTicketsElement = li.querySelector('.availableTickets');
+              availableTicketsElement.textContent = `Available Tickets: ${movieData.capacity - movieData.tickets_sold}`;
+    
+            } catch (error) {
+              console.error('NO tickets available', error);
+              alert('failed');
+            }
+          });
+        });
+    
+      } catch (error) {
+        console.error('no results', error);
+      }
+    });
+    

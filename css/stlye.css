@@ -1,3 +1,59 @@
-.banta{
-    background-color: green;
+body{
+    background-color: antiquewhite;
 }
+
+#movieDetails {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  #poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  #title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #runtime,
+  #showtime,
+  #availableTickets {
+    margin-bottom: 5px;
+  }
+  
+  #description {
+    margin-top: 10px;
+  }
+  
+  #buyTicketBtn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+color: black;
+  }
+  
+  #buyTicketBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  

@@ -36,10 +36,10 @@ body{
   color: white;
   padding: 5px 10px;
   border: none;
-  cursor: pointer;
+
 }
 
 #films button:disabled {
   background-color:antiquewhite;
-  cursor: not-allowed;
+
 }

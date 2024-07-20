@@ -1,59 +1,45 @@
 body{
-    background-color: antiquewhite;
+  background-color:blanchedalmond;
 }
 
-#movieDetails {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+#film1 {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid gainsboro;
+  max-width: 400px;
+  display: inline-block;
+}
 
-  
-  #poster {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  #title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  #runtime,
-  #showtime,
-  #availableTickets {
-    margin-bottom: 5px;
-  }
-  
-  #description {
-    margin-top: 10px;
-  }
-  
-  #buyTicketBtn {
-    display: block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border-radius: 15px;
-color: black;
-  }
-  
-  #buyTicketBtn:hover {
-    background-color: #0056b3;
-  }
-  
-  
+
+#films {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+
+#films li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gainsboro;
+  max-width: 300px;
+}
+
+#films img {
+  max-width: 100%;
+  height: auto;
+}
+
+#films button {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#films button:disabled {
+  background-color:antiquewhite;
+  cursor: not-allowed;
+}

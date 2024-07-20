@@ -44,11 +44,7 @@ fetch('http://localhost:3000/films/1')
     `
 
 film.appendChild(lu)
-const buyTicketBtn = lu.querySelectorAll('#buyticket');
-buyTicketBtn.addEventListener('click', function() {
-    if (availableTickets > 0) {
-    alert ('do you want to buy it?')
-    }})
+
 
     
   })})

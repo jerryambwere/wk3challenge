@@ -1,45 +1,28 @@
-body{
-  background-color:blanchedalmond;
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Playwrite+CL:wght@100..400&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+#film1 #poster {
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 15px;
+  background-color: rgb(222, 215, 228);
+}
+#films{
+padding-left: 30px;
+padding-right: 30px;
+text-align: left;
+font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 15px;
+  background-color: rgb(222, 215, 228);
 }
 
-#film1 {
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid gainsboro;
-  max-width: 400px;
-  display: inline-block;
-}
-
-
-#films {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 20px;
-}
-
-
-#films li {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid gainsboro;
-  max-width: 300px;
-}
-
-#films img {
-  max-width: 100%;
-  height: auto;
-}
-
-#films button {
-  background-color: blue;
-  color: white;
-  padding: 5px 10px;
-  border: none;
-
-}
-
-#films button:disabled {
-  background-color:antiquewhite;
-
+#films #poster{
+  border-radius: 20px;
+  display: grid;
+  height: 20cm;
+  width: 20cm;
+  
 }

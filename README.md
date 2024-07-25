@@ -132,6 +132,6 @@ Click on a movie in the menu to replace the currently displayed movie's details 
 
 When a movie is sold out (when there are no available tickets remaining), indicate that the movie is sold out by changing the button text to "Sold Out". Also update the film item in the `ul#films` menu by adding a class of `sold-out` to the film. For reference, here's what the contents of the `ul#films` element should look like with a sold out film:
  
- The project can be ran live at ("https://jerryambwere.github.io/wk3challenge/")
+ The project can be ran live at ("https://movies-black-phi.vercel.app/")
 
  author: Melvine Jerry Ambwere
